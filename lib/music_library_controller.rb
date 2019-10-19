@@ -79,7 +79,7 @@ end
     puts "Which song number would you like to play?"
     input = gets.strip.to_i #gets input, makes sure it's integer
     if input >= 1 && input <= songs.length
-      songs.all
+      Song.all.sort {|a, b| a.name <=> b.name}
     #sort songs, pull out input - 1
     
     #find the song
