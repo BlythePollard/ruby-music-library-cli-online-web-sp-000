@@ -21,9 +21,16 @@ class MusicLibraryController
   end
  
   case input
-   when input = "list songs"
+   when "list songs"
      list_songs
-    when 
+    when "list artists"
+      list_artists
+    when "list genres"
+      list_genres
+    when "list artist"
+      list_songs_by_artist
+    when "list genre"
+      list_songs_by_genre
   end
   
   def list_songs
