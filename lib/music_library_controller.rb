@@ -79,14 +79,8 @@ end
     puts "Which song number would you like to play?"
     input = gets.strip.to_i #gets input, makes sure it's integer
     if input >= 1 && input <= songs.length
-      Song.all.sort {|a, b| a.name <=> b.name}
-      []
-    #sort songs, pull out input - 1
-    
-    #find the song
-    #iterates over songs? or list_songs (prob no because list of strings)? why isn't list_songs showing up as list of strings?
-    #pulls matching input from list_songs
-    #puts "playing (song) by (artist)"
+      song = Song.all.sort {|a, b| a.name <=> b.name}[input - 1]
+      puts "Playing #{song.name} by #{song.artist.name}"
   end
 end
 end
