@@ -78,6 +78,7 @@ end
   def play_song
     puts "Which song number would you like to play?"
     input = gets.strip.to_i #gets input, makes sure it's integer
+    if input 
     #if input is between 1 and songs.length
     if song = Song.find_by_name(input) #if song input matches existing song (is valid input)
     #iterates over songs? or list_songs (prob no because list of strings)? why isn't list_songs showing up as list of strings?
