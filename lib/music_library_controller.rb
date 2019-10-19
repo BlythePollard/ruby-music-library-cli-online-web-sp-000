@@ -20,6 +20,11 @@ class MusicLibraryController
   input = gets.strip
   end
  
+  case input
+   when input = "list songs"
+     list_songs
+  end
+  
   def list_songs
     song_list = Song.all.sort {|a, b| a.name <=> b.name} #Sort alphabetically by song name
     song_list.each.with_index(1) {|song, index| puts "#{index}. #{song.artist.name} - #{song.name} - #{song.genre.name}"}
