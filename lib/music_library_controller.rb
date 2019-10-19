@@ -62,9 +62,9 @@ class MusicLibraryController
   
   def play_song
     puts "Which song number would you like to play?"
-    input = gets.strip
+    input = gets.strip.to_i #gets input, makes sure it's integer
     if song = Song.find_by_name(input) #if song input matches existing song (is valid input)
-    
+    #iterates over list_songs? but how to iterate over list of strings? why isn't list_songs showing up as list of strings?
     #pulls matching input from list_songs
     #puts "playing (song) by (artist)"
   end
