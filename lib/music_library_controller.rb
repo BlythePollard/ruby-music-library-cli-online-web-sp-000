@@ -78,8 +78,8 @@ end
   def play_song
     puts "Which song number would you like to play?"
     input = gets.strip.to_i #gets input, makes sure it's integer
-    
-    #if input is between 1 and songs.length (is valid input) input - 1
+    if input >= 1 && input <= songs.length
+      songs.all
     #sort songs, pull out input - 1
     
     #find the song
